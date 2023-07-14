@@ -36,13 +36,7 @@ async function returnCoordinates() {
   return getPosition();
 };
 
-
-
-
-
-
-
-// Google map
+// Initializes Google maps and displays map
 let map;
 
 async function initMap() {
@@ -57,16 +51,8 @@ async function initMap() {
     position: pos,
     map: map
   })
-  
-
-  
+   
 }
-
-
-btn.addEventListener('click', calcDistance);
-
-
-
 
 
 // Calculate distance
@@ -95,12 +81,28 @@ async function calcDistance(){
     
     service.getDistanceMatrix(request).then((response) => {
       // put response
-      loc.innerText = JSON.stringify(
-        response,
-        null,
-        1
-      )});
+    //   loc.innerText = JSON.stringify(
+    //     response,
+    //     null,
+    //     1
+    //   )
+    let arr = response.rows[0].elements
+    let arr2 = [];
+    let arr2s = [];
+    //sorts distances into array
+    for (let i = 0; i < arr.length; i++) {
+        arr2.push(arr[i].distance.value);
+        arr2s = arr2.sort((a,b)=>a-b)
+    }
+    //checks in console 
+    console.log(arr);
+    console.log(arr2s);
+
+    for (let i = 0; i < arr2s.length; i++) {
+        loc.innerHTML = `${arr2s[i]} km`
+    }
+    });
   }
 
-  initMap();
-  // calcDistance();
+initMap();
+btn.addEventListener('click', calcDistance);
