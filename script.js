@@ -193,17 +193,14 @@ function sortLocationNames(response) {
   return locationNames
 }
 
-// if (sortedDistances[i]== apiResponse.rows[0].elements[j].distance.text)
-// locationNames[i]=surfSpots[j].name
 
 //lists distances to surf spots onto page
 function listDistances(response) {
   let locationNames = sortLocationNames(response);
-
-
   let sortedDistances = returnSortedDistanceArray(response);
+
   for (let i = 0; i < sortedDistances.length; i++) {
-    loc.innerHTML += `<p>${sortedDistances[i]} </p>`;
+    loc.innerHTML += `<p>${locationNames[i]} : ${sortedDistances[i]} </p>`;
   }
 }
 
