@@ -68,67 +68,66 @@ async function initMap() {
 
 }
 
+//collects distance & duration api response into array
+function returnDistancesAndDurations(response) {
+  let distancesAndDurations = response.rows[0].elements
+  return distancesAndDurations
+}
+
+
+//adds and orders distances to surf spots into an array
+function returnSortedDistanceArray(response) {
+
+  let distancesAndDurations = returnDistancesAndDurations(response);
+  let sortedDistances = [];
+  for (let i = 0; i < distancesAndDurations.length; i++) {
+    sortedDistances.push(distancesAndDurations[i].distance.value);
+  }
+
+  //orders by distance
+  sortedDistances = sortedDistances.sort((a, b) => a - b)
+
+  // replaces distance value with distance text
+  for (let i = 0; i < sortedDistances.length; i++) {
+    for (let j = 0; j < distancesAndDurations.length; j++) {
+      if (sortedDistances[i] == distancesAndDurations[j].distance.value) {
+        sortedDistances[i] = distancesAndDurations[j].distance.text;
+      };
+    }
+
+  }
+  console.log(sortedDistances);
+  return sortedDistances
+}
+
+
+//lists distances to surf spots onto page
+function listDistances(response) {
+  let sortedDistances = returnSortedDistanceArray(response);
+  for (let i = 0; i < sortedDistances.length; i++) {
+    loc.innerHTML += `<p>${sortedDistances[i]} </p>`;
+  }
+}
+
+
 // Calculate distance
 async function calcDistance() {
 
   const service = new google.maps.DistanceMatrixService();
-  const origin = pos;
   const request = {
-    origins: [origin,],
+    origins: [pos],
     destinations: surfSpots,
     travelMode: google.maps.TravelMode.DRIVING,
     unitSystem: google.maps.UnitSystem.METRIC,
     avoidHighways: false,
     avoidTolls: false,
   }
-
-  // loc.innerText = JSON.stringify(
-  //   loc,
-  //   null,
-  //   1
-  // );
-
-
   service.getDistanceMatrix(request).then((response) => {
-    // put response
-    //   loc.innerText = JSON.stringify(
-    //     response,
-    //     null,
-    //     1
-    //   )
-    // adds distance & duration to array from api response
-    let arr = response.rows[0].elements
-    console.log(arr);
-    
-
-    //distances into new array
-    let arr2 = [];
-    for (let i = 0; i < arr.length; i++) {
-      arr2.push(arr[i].distance.value);
-    }
-
-    //orders by distance
-    arr2 = arr2.sort((a, b) => a - b)
-
-    // replaces distance value with distance text
-    for (let i = 0; i < arr2.length; i++) {
-      for (let j = 0; j < arr.length; j++) {
-        if (arr2[i] == arr[j].distance.value) {
-          arr2[i] = arr[j].distance.text;
-        };
-      }
-    }
-
-    console.log(arr2);
-
-    // lists distances onto page
-    for (let i = 0; i < arr2.length; i++) {
-      loc.innerHTML += `<p>${arr2[i]} </p>`;
-    }
+    listDistances(response);
   });
 }
 
-function app(){
+function app() {
   initMap();
   btn.addEventListener('click', calcDistance);
 }
