@@ -74,12 +74,18 @@ const surfSpots = [
 ];
 
 
-
 // array of surf spot coordinates
 let surfSpotCoords = []
 for (let i = 0; i < surfSpots.length; i++) {
   surfSpotCoords.push(surfSpots[i].location)
 }
+
+// array of location names
+let locationNames = []
+for (let i = 0; i < surfSpots.length; i++) {
+  locationNames.push(surfSpots[i].name)
+}
+
 
 
 //Determine browser location
@@ -171,15 +177,30 @@ function returnSortedDistanceArray(response) {
   return sortedDistances
 }
 
-//returns sorted place names
-function placeNameArray(response) {
-  console.log('hi');
+// returns sorted place names
+function sortLocationNames(response) {
+  let apiResponse =returnAPIResponse(response);
+  let sortedDistances =returnSortedDistanceArray(response);
+
+  for (let i = 0; i < sortedDistances.length; i++){
+    for (let j = 0; j < locationNames.length; j++){
+      if (sortedDistances[i]== apiResponse.rows[0].elements[j].distance.text){
+        locationNames[i]=surfSpots[j].name
+      }
+    }
+  }
+  console.log(locationNames)
+  return locationNames
 }
 
+// if (sortedDistances[i]== apiResponse.rows[0].elements[j].distance.text)
+// locationNames[i]=surfSpots[j].name
 
 //lists distances to surf spots onto page
 function listDistances(response) {
-  let addresses = returnAddressesArray(response);
+  let locationNames = sortLocationNames(response);
+
+
   let sortedDistances = returnSortedDistanceArray(response);
   for (let i = 0; i < sortedDistances.length; i++) {
     loc.innerHTML += `<p>${sortedDistances[i]} </p>`;
