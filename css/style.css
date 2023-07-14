@@ -1066,3 +1066,9 @@ header {
   }
 
 }
+
+/* google map */
+#map2 {
+  height: 400px;
+  width: 400px;
+}
