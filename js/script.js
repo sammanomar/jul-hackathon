@@ -173,7 +173,6 @@ function returnSortedDistanceArray(response) {
     }
 
   }
-  console.log(sortedDistances);
   return sortedDistances
 }
 
@@ -189,7 +188,6 @@ function sortLocationNames(response) {
       }
     }
   }
-  console.log(locationNames)
   return locationNames
 }
 
