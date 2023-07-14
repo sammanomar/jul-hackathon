@@ -1,5 +1,5 @@
 # jul-hackathon
 
-## Collaborators
+## Contributors
 
 ## Wireframes
