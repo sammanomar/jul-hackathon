@@ -1,10 +1,24 @@
+//Declare dom elements
 const loc = document.getElementById('loc');
 const btn = document.getElementById('btn');
 
-//Determine browser location
-
+//Current position
 let pos = await returnCoordinates();
 
+//Surf spots array
+const surfSpots = [
+  { lat: 48.39276, lng: 135.72473 },
+  { lat: 50.087, lng: 14.421 },
+  { lat: 52.75672962610946, lng: -6.245176598717489 },
+  { lat: 52.18789747091325, lng: -6.547300610706609 },
+  { lat: 51.99890520306989, lng: -7.623960726158749 },
+
+  // { lat: 4.56298, lng: 86.35182 },
+  // { lat: 15.77314, lng: -32.27885 },
+  // { lat: -25.77536, lng: -13.37909 },
+  // { lat: 27.22509, lng: 37.68827 },
+]
+//Determine browser location
 function getPosition() {
 
   return new Promise((res, rej) => {
@@ -41,7 +55,7 @@ let map;
 
 async function initMap() {
   const { Map } = await google.maps.importLibrary("maps");
-  
+
 
   map = new Map(document.getElementById("map"), {
     center: pos,
@@ -51,58 +65,73 @@ async function initMap() {
     position: pos,
     map: map
   })
-   
+
 }
 
-
 // Calculate distance
-async function calcDistance(){
-  // const geocoder = new google.maps.Geocoder();
+async function calcDistance() {
+
   const service = new google.maps.DistanceMatrixService();
-  const origin1 = pos;
-  
-  const destinationA = "Stockholm, Sweden";
-  const destinationB = { lat: 50.087, lng: 14.421 };
+  const origin = pos;
   const request = {
-    origins: [origin1,],
-    destinations: [destinationA, destinationB],
+    origins: [origin,],
+    destinations: surfSpots,
     travelMode: google.maps.TravelMode.DRIVING,
     unitSystem: google.maps.UnitSystem.METRIC,
     avoidHighways: false,
     avoidTolls: false,
   }
 
-    loc.innerText = JSON.stringify(
-      loc,
-      null,
-      1
-    );
-    
-    
-    service.getDistanceMatrix(request).then((response) => {
-      // put response
+  // loc.innerText = JSON.stringify(
+  //   loc,
+  //   null,
+  //   1
+  // );
+
+
+  service.getDistanceMatrix(request).then((response) => {
+    // put response
     //   loc.innerText = JSON.stringify(
     //     response,
     //     null,
     //     1
     //   )
+    // adds distance & duration to array from api response
     let arr = response.rows[0].elements
-    let arr2 = [];
-    let arr2s = [];
-    //sorts distances into array
-    for (let i = 0; i < arr.length; i++) {
-        arr2.push(arr[i].distance.value);
-        arr2s = arr2.sort((a,b)=>a-b)
-    }
-    //checks in console 
     console.log(arr);
-    console.log(arr2s);
+    
 
-    for (let i = 0; i < arr2s.length; i++) {
-        loc.innerHTML = `${arr2s[i]} km`
+    //distances into new array
+    let arr2 = [];
+    for (let i = 0; i < arr.length; i++) {
+      arr2.push(arr[i].distance.value);
     }
-    });
-  }
 
-initMap();
-btn.addEventListener('click', calcDistance);
+    //orders by distance
+    arr2 = arr2.sort((a, b) => a - b)
+
+    // replaces distance value with distance text
+    for (let i = 0; i < arr2.length; i++) {
+      for (let j = 0; j < arr.length; j++) {
+        if (arr2[i] == arr[j].distance.value) {
+          arr2[i] = arr[j].distance.text;
+        };
+      }
+    }
+
+    console.log(arr2);
+
+    // lists distances onto page
+    for (let i = 0; i < arr2.length; i++) {
+      loc.innerHTML += `<p>${arr2[i]} </p>`;
+    }
+  });
+}
+
+function app(){
+  initMap();
+  btn.addEventListener('click', calcDistance);
+}
+
+app();
+
