@@ -68,12 +68,19 @@ async function initMap() {
 
 }
 
-//collects distance & duration api response into array
-function returnDistancesAndDurations(response) {
-  let distancesAndDurations = response.rows[0].elements
-  return distancesAndDurations
+//returns API response
+function returnAPIResponse(response) {
+  let apiResponse = response
+  console.log(apiResponse);
+  return apiResponse
 }
 
+//collects distance & duration into array
+function returnDistancesAndDurations(response) {
+  let apiResponse = returnAPIResponse(response);
+  let distancesAndDurations = apiResponse.rows[0].elements
+  return distancesAndDurations
+}
 
 //adds and orders distances to surf spots into an array
 function returnSortedDistanceArray(response) {
@@ -123,6 +130,7 @@ async function calcDistance() {
     avoidTolls: false,
   }
   service.getDistanceMatrix(request).then((response) => {
+    // console.log(response);
     listDistances(response);
   });
 }
