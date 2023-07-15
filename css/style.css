@@ -217,6 +217,7 @@ header {
 }
 
 .sidebar-navigation ul {
+  margin-top: 7px;
   margin-left: 45px;
   list-style: none;
   padding: 0;
@@ -970,8 +971,6 @@ header {
 #blog .item .text-content .accent-button {
   margin-top: 25px;
 }
-
-
 
 
 /* Contact Style */
