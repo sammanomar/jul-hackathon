@@ -1067,7 +1067,26 @@ header {
   font-weight: 600;
 }
 
+/* Modal Style */
 
+.modal-title {
+  font-size: 3rem;
+  font-family: 'Pangolin', sans-serif;
+  text-align: center;
+  font-weight: 700;
+  color: #de7a29;
+}
+
+.modal-body h3 {
+  font-family: 'Pangolin', sans-serif;
+}
+
+.modal-dialog-centered {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
 
 /* Responsive Style */
 
