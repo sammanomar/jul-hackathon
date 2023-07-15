@@ -178,13 +178,13 @@ function returnSortedDistanceArray(response) {
 
 // returns sorted place names
 function sortLocationNames(response) {
-  let apiResponse =returnAPIResponse(response);
-  let sortedDistances =returnSortedDistanceArray(response);
+  let apiResponse = returnAPIResponse(response);
+  let sortedDistances = returnSortedDistanceArray(response);
 
-  for (let i = 0; i < sortedDistances.length; i++){
-    for (let j = 0; j < locationNames.length; j++){
-      if (sortedDistances[i]== apiResponse.rows[0].elements[j].distance.text){
-        locationNames[i]=surfSpots[j].name
+  for (let i = 0; i < sortedDistances.length; i++) {
+    for (let j = 0; j < locationNames.length; j++) {
+      if (sortedDistances[i] == apiResponse.rows[0].elements[j].distance.text) {
+        locationNames[i] = surfSpots[j].name
       }
     }
   }
@@ -198,10 +198,9 @@ function listDistances(response) {
   let sortedDistances = returnSortedDistanceArray(response);
 
   for (let i = 0; i < sortedDistances.length; i++) {
-    loc.innerHTML += `<p>${locationNames[i]} : ${sortedDistances[i]} </p>`;
+    loc.innerHTML += `<a href = 'https://www.google.com/maps/place/${locationNames[i]}' target='_blank' ><p>${locationNames[i]} : ${sortedDistances[i]}</p></a>`;
   }
 }
-
 
 // Calculate distance
 async function calcDistance() {
