@@ -16,16 +16,12 @@
     <link rel="stylesheet" href="css/light-box.css">
     <link rel="stylesheet" href="css/owl-carousel.css">
     <link rel="stylesheet" href="css/style.css">
-
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
-
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
     <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
 </head>
 
 <body>
-
-
-
     <header class="nav-down responsive-nav hidden-lg hidden-md">
         <button type="button" id="nav-toggle" class="navbar-toggle" data-toggle="collapse" data-target="#main-nav">
             <span class="sr-only">Toggle navigation</span>
@@ -39,9 +35,11 @@
                 <ul class="nav navbar-nav">
                     <li><a href="#top">Home</a></li>
                     <li><a href="#featured">Locations</a></li>
+                    <li><a href="#findLocation">Find Nearest Surf Location</a></li>
                     <li><a href="#projects">Recent Photos</a></li>
                     <li><a href="#video">Presentation</a></li>
                     <li><a href="#blog">Upcoming Events</a></li>
+                    <li><a href="#team">Meet Our Team</a></li>
                     <li><a href="#contact">Contact Us</a></li>
                 </ul>
             </nav>
@@ -69,6 +67,13 @@
                     </a>
                 </li>
                 <li>
+                    <a href="#findLocation">
+                        <span class="rect"></span>
+                        <span class="circle"></span>
+                        Find Nearest Surf Location
+                    </a>
+                </li>
+                <li>
                     <a href="#projects">
                         <span class="rect"></span>
                         <span class="circle"></span>
@@ -87,6 +92,13 @@
                         <span class="rect"></span>
                         <span class="circle"></span>
                         Upcoming Events
+                    </a>
+                </li>
+                <li>
+                    <a href="#team">
+                        <span class="rect"></span>
+                        <span class="circle"></span>
+                        Meet Our Team
                     </a>
                 </li>
                 <li>
@@ -170,9 +182,6 @@
         <section id="featured" class="content-section">
             <div class="section-heading">
                 <h1>Featured<br><em>Locations</em></h1>
-                <p>Praesent pellentesque efficitur magna,
-                    <br>sed pellentesque neque malesuada vitae.
-                </p>
             </div>
             <div class="section-content">
                 <div class="owl-carousel owl-theme">
@@ -306,12 +315,22 @@
                 </div>
             </div>
         </section>
+        <section id="findLocation" class="content-section">
+            <div class="row">
+                <h1>Find Nearest Surf Location:</h1>
+                <div>
+                    <button id='btn' cclass="'btn">Click</button>
+                    <div id="loc">
+                    </div>
+                    <div class="col-md-12">
+                        <h2>Current Location:</h2>
+                        <div id="map2"></div>
+                    </div>
+                </div>
+        </section>
         <section id="projects" class="content-section">
             <div class="section-heading">
                 <h1>Recent<br><em>Photos</em></h1>
-                <p>Praesent pellentesque efficitur magna,
-                    <br>sed pellentesque neque malesuada vitae.
-                </p>
             </div>
             <div class="section-content">
                 <div class="masonry">
@@ -375,7 +394,7 @@
                         </div>
                         <div class="video-container">
                             <iframe width="100%" height="520"
-                                src="https://www.youtube.com/embed/j-_7Ub-Zkow?rel=0&amp;showinfo=0" frameborder="0"
+                                src="https://www.youtube.com/embed/amFHxh55-BE?rel=0&amp;showinfo=0" frameborder="0"
                                 allowfullscreen="allowfullscreen"></iframe>
                         </div>
                     </div>
@@ -385,9 +404,6 @@
         <section id="blog" class="content-section">
             <div class="section-heading">
                 <h1>Upcoming<br><em>Events</em></h1>
-                <p>Curabitur hendrerit mauris mollis ipsum vulputate rutrum.
-                    <br>Phasellus luctus odio eget dui imperdiet.
-                </p>
             </div>
             <div class="section-content">
                 <div class="tabs-content">
@@ -407,9 +423,11 @@
                                             <div class="text-content">
                                                 <h4>2023 KOREV lager English Interclub Surfing Championships</h4>
                                                 <span>8-9 October 2023</span>
-                                                <p>The Korev Lager English Interclub Surfing Championships is an annual event that takes place in Newquay, 
-                                                   UK. It is a team competition where surf clubs from across England compete for championship titles across open,
-                                                   women, and junior divisions .</p>
+                                                <p>The Korev Lager English Interclub Surfing Championships is an annual
+                                                    event that takes place in Newquay,
+                                                    UK. It is a team competition where surf clubs from across England
+                                                    compete for championship titles across open,
+                                                    women, and junior divisions .</p>
                                                 <div class="accent-button button">
                                                     <a href="https://www.surfingengland.org/event/2023-korev-lager-english-interclub-surfing-championships/">Continue Reading</a>
                                                 </div>
@@ -422,8 +440,10 @@
                                             <div class="text-content">
                                                 <h4>Surfing Championships 2023-24</h4>
                                                 <span>13-15 Oct 2023</span>
-                                                <p>The BUCS Surfing Championships 2023-24 is an event that will be held in Newquay for the annual BUCS Surfing Championships.
-                                                   The event will take place from 13 - 15 Oct 2023 at Fistral Beach, Headland Rd, Newquay, TR7 1EW.</p>
+                                                <p>The BUCS Surfing Championships 2023-24 is an event that will be held
+                                                    in Newquay for the annual BUCS Surfing Championships.
+                                                    The event will take place from 13 - 15 Oct 2023 at Fistral Beach,
+                                                    Headland Rd, Newquay, TR7 1EW.</p>
 
                                                 <div class="accent-button button">
                                                     <a href="https://www.bucs.org.uk/events-page/surfing-championships-2023-24.html">Continue Reading</a>
@@ -442,12 +462,33 @@
                                             <div class="text-content">
                                                 <h4>31ST Jesus Surf Classic</h4>
                                                 <span>9-10 Sept 2023</span>
-                                                <p>The 31st Jesus Surf Classic will be held at Croyde Bay in North Devon on 9-10 September 2023 1.
-                                                   The event is organized by Christian Surfers UK and will feature fantastic surfing action, live music,
-                                                   and plenty of refreshments and other attractions</p>
+                                                <p>The 31st Jesus Surf Classic will be held at Croyde Bay in North Devon
+                                                    on 9-10 September 2023 1.
+                                                    The event is organized by Christian Surfers UK and will feature
+                                                    fantastic surfing action, live music,
+                                                    and plenty of refreshments and other attractions</p>
 
                                                 <div class="accent-button button">
-                                                    <a href="https://www.surfingengland.org/event/31st-jesus-surf-classic/">Continue Reading</a>
+                                                    <a href="#contact">Continue Reading</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="item">
+                                            <img src="img/blog_1.jpg" alt="">
+                                            <div class="text-content">
+                                                <h4>British Surfing Championships</h4>
+                                                <span>16-17 September 2023</span>
+                                                <p>: The British Surfing Championships is the ultimate event in the UK
+                                                    surfing calendar.
+                                                    Surfers from all over the country gather at Bournemouth Beach to
+                                                    compete for the coveted British title.
+                                                    This exciting competition showcases the very best of British surfing
+                                                    talent.</p>
+
+                                                <div class="accent-button button">
+                                                    <a href="#contact">Continue Reading</a>
                                                 </div>
                                             </div>
                                         </div>
@@ -459,8 +500,10 @@
                                             <div class="text-content">
                                                 <h4>Adaptive Surfing Open</h4>
                                                 <span>21-22 September 2023</span>
-                                                <p>The English Adaptive Surfing Open is an event that takes place at The Wave, an inland surfing lake on the outskirts of Bristol.
-                                                    The event sees some of the world’s best para-surfers compete in a range of categories.</p>
+                                                <p>The English Adaptive Surfing Open is an event that takes place at The
+                                                    Wave, an inland surfing lake on the outskirts of Bristol.
+                                                    The event sees some of the world’s best para-surfers compete in a
+                                                    range of categories.</p>
 
                                                 <div class="accent-button button">
                                                     <a href="https://www.surfingengland.org/event/2023-english-adaptive-surfing-open/?mc_id=371">Continue Reading</a>
@@ -478,9 +521,11 @@
                                             <div class="text-content">
                                                 <h4>Scottish National Surfing Championships</h4>
                                                 <span>12-14 August 2023</span>
-                                                <p>The Scottish National Surfing Championships is the premier event for surfers in Scotland. 
-                                                   Held at the renowned Thurso East, Caithness. 
-                                                   this competition features top surfers battling it out in challenging Scottish waves to claim the national title.
+                                                <p>The Scottish National Surfing Championships is the premier event for
+                                                    surfers in Scotland.
+                                                    Held at the renowned Thurso East, Caithness.
+                                                    this competition features top surfers battling it out in challenging
+                                                    Scottish waves to claim the national title.
 
                                                 </p>
 
@@ -496,17 +541,36 @@
                             </div>
                             <div id="tab4">
                                 <ul>
-                                    
+                                    <li>
+                                        <div class="item">
+                                            <img src="img/blog_1.jpg" alt="">
+                                            <div class="text-content">
+                                                <h4>Welsh Open Surfing Championships</h4>
+                                                <span>8-9 July 2023</span>
+                                                <p>The Welsh Open Surfing Championships is an exciting event that
+                                                    attracts surfers from across Wales and beyond.
+                                                    Held at the beautiful Whitesands Bay in Pembrokeshire, this
+                                                    competition showcases the talent and skills of Welsh surfers.</p>
+
+                                                <div class="accent-button button">
+                                                    <a href="#contact">Continue Reading</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
                                     <li>
                                         <div class="item">
                                             <img src="img/blog_3.jpg" alt="">
                                             <div class="text-content">
                                                 <h4>The British Summer Championships
-                                                    
+
                                                 </h4>
                                                 <span>22-28 July 2023</span>
-                                                <p>From July 22nd to July 28th, the Ponds Forge International Sports Centre will host the British Summer Championships 2023 in Sheffield , 
-                                                   which will provide a great opportunity for every athlete involved to compete in a busy programme at the end of the season.</p>
+                                                <p>From July 22nd to July 28th, the Ponds Forge International Sports
+                                                    Centre will host the British Summer Championships 2023 in Sheffield
+                                                    ,
+                                                    which will provide a great opportunity for every athlete involved to
+                                                    compete in a busy programme at the end of the season.</p>
 
                                                 <div class="accent-button button">
                                                     <a href="https://www.britishswimming.org/events-and-tickets/british-summer-championships-2023/">Continue Reading</a>
@@ -518,6 +582,118 @@
                                 </ul>
                             </div>
                         </section>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="team" class="content-section">
+            <div class="section-heading">
+                <h1>Meet<br><em>Our Team</em></h1>
+            </div>
+            <div class="section-content">
+                <div class="owl-carousel owl-theme">
+                    <div class="item">
+                        <div class="image">
+                            <img src="img/Sam.jpg" alt="">
+                            <div class="featured-button button">
+                                <a href="#">Dublin, Irlend</a>
+                            </div>
+                        </div>
+                        <div class="text-content">
+                            <h4>Sam Martin</h4>
+                            <span>
+                                <a href="https://www.linkedin.com/in/samuelmartin92" target="_blank" aria-label="Link to linkedin">
+                                    <i class="fa fa-linkedin" aria-hidden="true"></i></a>
+                                <a href="https://github.com/SamMartin92" target="_blank" aria-label="Link to github">
+                                    <i class="fa fa-github" aria-hidden="true"></i></a>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="image">
+                            <img src="img/featured_1.jpg" alt="">
+                            <div class="featured-button button">
+                                <a href="#">Berlin, Germeny</a>
+                            </div>
+                        </div>
+                        <div class="text-content">
+                            <h4>Owen Samman</h4>
+                            <span>
+                                <a href="https://www.linkedin.com/in/omar-s-3a65b2267" target="_blank" aria-label="Link to linkedin">
+                                    <i class="fa fa-linkedin" aria-hidden="true"></i></a>
+                                <a href="https://github.com/sammanomar" target="_blank" aria-label="Link to github">
+                                    <i class="fa fa-github" aria-hidden="true"></i></a>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="image">
+                            <img src="img/Vadims.png" alt="">
+                            <div class="featured-button button">
+                                <a href="#">London, United Kingdom</a>
+                            </div>
+                        </div>
+                        <div class="text-content">
+                            <h4>Vadims J.</h4>
+                            <span>
+                                <a href="https://www.linkedin.com/in/vadimsj/" target="_blank" aria-label="Link to linkedin">
+                                    <i class="fa fa-linkedin" aria-hidden="true"></i></a>
+                                <a href="https://github.com/vadimsj" target="_blank" aria-label="Link to github">
+                                    <i class="fa fa-github" aria-hidden="true"></i></a>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="image">
+                            <img src="img/Nile.jpg" alt="">
+                            <div class="featured-button button">
+                                <a href="#">London, United Kingdom</a>
+                            </div>
+                        </div>
+                        <div class="text-content">
+                            <h4>Ghassan Ishag</h4>
+                            <span>
+                                <a href="https://www.linkedin.com/in/ghassanishag" target="_blank" aria-label="Link to linkedin">
+                                    <i class="fa fa-linkedin" aria-hidden="true"></i></a>
+                                <a href="https://github.com/ghassanishag" target="_blank" aria-label="Link to github">
+                                    <i class="fa fa-github" aria-hidden="true"></i></a>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="image">
+                            <img src="img/sergios.png" alt="">
+                            <div class="featured-button button">
+                                <a href="#">London, United Kingdom</a>
+                            </div>
+                        </div>
+                        <div class="text-content">
+                            <h4>Sergios Papastergiou</h4>
+                            <span>
+                                <a href="https://www.linkedin.com/in/sergios-papastergiou-8b7855162" target="_blank" aria-label="Link to linkedin">
+                                    <i class="fa fa-linkedin" aria-hidden="true"></i></a>
+                                <a href="https://github.com/sergpapa" target="_blank" aria-label="Link to github">
+                                    <i class="fa fa-github" aria-hidden="true"></i></a>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="image">
+                            <img src="img/jawahir.png" alt="">
+                            <div class="featured-button button">
+                                <a href="#">London, United Kingdom</a>
+                            </div>
+                        </div>
+                        <div class="text-content">
+                            <h4>Jawahir Abdul-Bari</h4>
+                            <span>
+                                <a href="https://www.linkedin.com/in/jawahir-al-jabarty-5981041a9/" target="_blank"
+                                    aria-label="Link to linkedin">
+                                    <i class="fa fa-linkedin" aria-hidden="true"></i></a>
+                                <a href="https://github.com/Jawahir01" target="_blank" aria-label="Link to github">
+                                    <i class="fa fa-github" aria-hidden="true"></i></a>
+                            </span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -538,10 +714,6 @@
             <div id="contact-content">
                 <div class="section-heading">
                     <h1>Contact<br><em>WaveFinder</em></h1>
-                    <p>Curabitur hendrerit mauris mollis ipsum vulputate rutrum.
-                        <br>Phasellus luctus odio eget dui imperdiet.
-                    </p>
-
                 </div>
                 <div class="section-content">
                     <form id="contact" action="#" method="post">
@@ -586,7 +758,8 @@
                 . Design: Hackathon Team</p>
         </section>
     </div>
-
+    <script>(g => { var h, a, k, p = "The Google Maps JavaScript API", c = "google", l = "importLibrary", q = "__ib__", m = document, b = window; b = b[c] || (b[c] = {}); var d = b.maps || (b.maps = {}), r = new Set, e = new URLSearchParams, u = () => h || (h = new Promise(async (f, n) => { await (a = m.createElement("script")); e.set("libraries", [...r] + ""); for (k in g) e.set(k.replace(/[A-Z]/g, t => "_" + t[0].toLowerCase()), g[k]); e.set("callback", c + ".maps." + q); a.src = `https://maps.${c}apis.com/maps/api/js?` + e; d[q] = f; a.onerror = () => h = n(Error(p + " could not load.")); a.nonce = m.querySelector("script[nonce]")?.nonce || ""; m.head.append(a); })); d[l] ? console.warn(p + " only loads once. Ignoring:", g) : d[l] = (f, ...n) => r.add(f) && u().then(() => d[l](f, ...n)); })
+            ({ key: "AIzaSyC5cQeKCdN6HL9-D8HdyPy5XjRVIvULiac", v: "weekly" });</script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
 
@@ -594,6 +767,7 @@
 
     <script src="js/plugins.js"></script>
     <script src="js/main.js"></script>
+    <script type="module" src="js/script.js"></script>
 
     <script>
         // Hide Header on on scroll down
@@ -637,7 +811,8 @@
     </script>
 
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js" type="text/javascript"></script>
-
 </body>
+
+
 
 </html>
