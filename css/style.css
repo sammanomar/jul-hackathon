@@ -700,6 +700,7 @@ header {
 #team .item .text-content {
   padding-top: 20px;
   background-color: #fff;
+  text-align: center;
   position: relative;
   z-index: 10;
 }
@@ -707,9 +708,8 @@ header {
 #team .item .text-content h4 {
   margin-top: 0px;
   margin-bottom: 5px;
-  font-size: 25px;
-  text-align: center;
-  font-weight: 600;
+  font-size: 20px;
+  font-weight: 800;
   color: #232323;
   letter-spacing: 0.5px;
 }
@@ -720,10 +720,8 @@ header {
   font-weight: 600;
   color: #7a7a7a;
   letter-spacing: 0.5px;
-  text-align: center;
-  margin-bottom: 12.5px;
+  margin-bottom: 12px;
   padding: 2px 18px;
-  text-align: center;
 }
 
 
