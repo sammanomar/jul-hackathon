@@ -283,8 +283,9 @@ async function calcDistance() {
         listDistances(response);
         let weatherButton = document.getElementById('weather-button');
         weatherButton.addEventListener('click', listWeather);
-
+        
     });
+    btn.removeEventListener('click', calcDistance)
 }
 
 ////...Weather
