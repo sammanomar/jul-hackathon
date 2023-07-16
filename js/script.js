@@ -260,13 +260,30 @@ function listDistances(response) {
 
 //lists weather beneath location
 function listWeather() {
+    let weatherButton = document.getElementById('weather-button');
+    weatherButton.innerText = 'Weather ▲';
+    weatherButton.removeEventListener('click', listWeather);
+    weatherButton.addEventListener('click', hideWeather);
     for (let i = 0; i < locationWeather.length; i++) {
         let weatherInfoI = document.getElementById(`weather-info-${i}`);
         weatherInfoI.innerHTML = locationWeather[i];
     }
 
+    
+
 }
 
+//hides weather
+function hideWeather() {
+    let weatherButton = document.getElementById('weather-button');
+    weatherButton.innerText = `Weather ▼`;
+    weatherButton.removeEventListener('click', hideWeather);
+    weatherButton.addEventListener('click', listWeather);
+    for (let i = 0; i < locationWeather.length; i++) {
+        let weatherInfoI = document.getElementById(`weather-info-${i}`);
+        weatherInfoI.innerHTML = ``;
+    }
+}
 
 // Calculate distance
 async function calcDistance() {
@@ -311,7 +328,6 @@ function setWeather(lat, lng) {
 function weatherInformations(openWeatherData) {
     let weather = `${openWeatherData.weather[0].main} : ${openWeatherData.weather[0].description} `;
     let temp = Math.round(openWeatherData.main.temp);
-    let seaLevel = openWeatherData.main.sea_level;
     let wind = Math.round(openWeatherData.wind.speed);
     let time = new Date(openWeatherData.dt * 1000);
     let hrs = time.getHours();
@@ -331,8 +347,8 @@ function weatherInformations(openWeatherData) {
     }
     const str = `<div class='weather-box'>
   <p> ${weather}</p>
-  <p>Sea Level : ${seaLevel}</p>
-         <p>${temp}°C  Wind Speed: ${wind} m/h Current Time: ${timeString}</p>
+         <p>Current Temp: ${temp}°C </p>
+          <p>Wind Speed: ${wind} m/h Current Time: ${timeString}</p>
           </div>`;
     locationWeather.push(str);
 }
