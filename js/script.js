@@ -8,6 +8,10 @@ let pos = await returnCoordinates();
 //Surf spots array
 const surfSpots = [
   {
+    name: "Sennen Cove, Cornwall, England",
+    location: { lat: 50.079444, lng: 5.697389 }
+  },
+  {
     name: "Fistral Beach, Cornwall, England",
     location: { lat: 50.418472, lng: -5.098361 },
   },
@@ -86,6 +90,12 @@ for (let i = 0; i < surfSpots.length; i++) {
   locationNames.push(surfSpots[i].name)
 }
 
+//array of location coords
+let locationCoords = []
+for (let i = 0; i < surfSpots.length; i++) {
+  locationCoords.push(surfSpots[i].location)
+}
+
 
 
 //Determine browser location
@@ -108,6 +118,7 @@ function getPosition() {
     }
 
     function error(error) {
+      console.log(error);
       console.log("Sorry, we can\'t retrieve your local weather without location permission.");
     }
 
@@ -137,6 +148,9 @@ async function initMap() {
   })
 
 }
+
+//return weather API
+
 
 //returns API response
 function returnAPIResponse(response) {
@@ -191,16 +205,33 @@ function sortLocationNames(response) {
   return locationNames
 }
 
+//return sorted coordinates
+function returnSortedCoords(response) {
+  let apiResponse = returnAPIResponse(response);
+  let sortedDistances = returnSortedDistanceArray(response);
+
+  for (let i = 0; i < sortedDistances.length; i++) {
+    for (let j = 0; j < locationCoords.length; j++) {
+      if (sortedDistances[i] == apiResponse.rows[0].elements[j].distance.text) {
+        locationCoords[i] = surfSpots[j].location
+      }
+    }
+  }
+  return locationCoords;
+}
 
 //lists distances to surf spots onto page
 function listDistances(response) {
   let locationNames = sortLocationNames(response);
   let sortedDistances = returnSortedDistanceArray(response);
+  let locationCoords = returnSortedCoords(response);
 
   for (let i = 0; i < sortedDistances.length; i++) {
     loc.innerHTML += `<a href = 'https://www.google.com/maps/place/${locationNames[i]}' target='_blank' ><p>${locationNames[i]} : ${sortedDistances[i]}</p></a>`;
   }
+
 }
+
 
 // Calculate distance
 async function calcDistance() {

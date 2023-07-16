@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WEATHER</title>
+    <style media="screen">
+        body {
+            background-color: lightblue;
+        }
+        #weather {
+            border: 6px solid orange;
+            border-radius: 3px;
+            width: 16em;
+            background-color: lightsalmon;
+            padding: 3px;
+        }
+        main {
+            margin: auto;
+            padding: 5px;
+            font-size: 1em;
+        }
+        button {
+            display: block;
+            font-size: 1em;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <button id="findLocation">Show My Location</button>
+        <p id="status">No Locations yet!</p>
+    </main>
+    <div id="weather">
+        <h1>Wafinder</h1>
+        <p>No Weather Data</p>
+    </div>
+    <script src="weatherAPIkey.js" charset="UTF-8"></script>
+    <script type="text/javascript">
+        //Geolocations
+        document.querySelector('#findLocation').addEventListener('click', geoLookUp, false)
+        function geoLookUp() {
+            const status = document.querySelector('#status')
+            function success(position) {
+                const latitude = position.coords.latitude
+                const longtitude = position.coords.longitude
+                status.textContent = `Lat: ${latitude}, Lon: ${longtitude}`
+                setWeather(latitude, longtitude)
+            }
+            function error(err) {
+                status.textContent = `Unable to retrieve your location: ${err.code}. ${err.message}`
+            }
+            if (!navigator.geolocation) {
+                status.textContent = "Geolocation is not supported or allowed by your browser"
+            } else {
+                status.textContent = "Loading..."
+                navigator.geolocation.getCurrentPosition(success, error)
+            }
+        }
+        //...Weather
+        function setWeather(latitude, longtitude) {
+            const p = document.querySelector('#weather p')
+            let openWeatherData = {}
+            let xhr = new XMLHttpRequest()
+            xhr.open('GET', `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longtitude}&appid=${weatherApiKey}`)
+            xhr.responseType = 'text'
+            xhr.addEventListener('load', function () {
+                if (xhr.status === 200) {
+                    p.textContent = "Loading..."
+                    openWeatherData = JSON.parse(xhr.responseText)
+                    weatherInformations(openWeatherData, p)
+                } else {
+                    p.textContent = 'ERROR' + xhr.status
+                }
+            }, false)
+            xhr.send()
+        }
+        function weatherInformations(openWeatherData, p) {
+            const location = openWeatherData.name
+            let temp = Math.round(openWeatherData.main.temp)
+            let wind = Math.round(openWeatherData.wind.speed)
+            let time = new Date(openWeatherData.dt * 1000)
+            let hrs = time.getHours()
+            let mins = time.getMinutes()
+            let timeString = ''
+            if (mins < 10) {
+                mins = `0${mins}`
+            }
+            if (hrs === 12) {
+                timeString = `12:${mins} PM`
+            } else if (hrs > 12) {
+                timeString = `${hrs - 12}:${mins} PM`
+            } else if (hrs === 0) {
+                timeString = `12:${mins} AM`
+            } else {
+                timeString = `${hrs}:${mins} AM}`
+            }
+            const str = `${location} ${temp}&#0176;<br> wind: ${wind} m/h <br>Current Time: ${timeString}`
+            p.innerHTML = str
+        }
+    </script>
+</body>
+</html> (edited) 
+
+
+
+
+
+2:26
+${weatherApiKey} this is a variable in another file that holds the api key
