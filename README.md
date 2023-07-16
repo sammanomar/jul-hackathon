@@ -29,8 +29,6 @@ The live link for "WaveFinder website" can be found [HERE](https://sammanomar.gi
   - [Main Languages Used](#main-languages-used "Main Languages Used")
   - [Frameworks, Libraries & Programs Used](#frameworks-libraries-programs-used "Frameworks, Libraries & Programs Used")
 - [Credits](#credits "Credits")
-  - [Content](#content "Content")
-  - [Media](#media "Media")
 
 ## UX
 
@@ -62,7 +60,7 @@ With a clean, easy to follow layout, the site users are guided through the featu
 
 - Link the contact form with email API
 - Allow users to Sign up and make accounts
-- Create a commercial side for the website
+- Develop a commercial side for the website
 
 ## User Stories
 
@@ -145,11 +143,9 @@ All fonts were obtained from fonts.googleapis (Ready to use template):
 
 ### Features Left to Implement
 
-- Online shop
-- Artist profiles
-- Contact page
-- Password reset
-- Social media sign-in
+- Link the contact form with email API
+- Allow users to Sign up and make accounts
+- Develop a commercial side for the website
 
 ## Testing
 
