@@ -159,13 +159,11 @@ All fonts were obtained from fonts.googleapis (Ready to use template):
   ![HTML validator message](img/screenshots/htmltest.png)
 
 - CSS files pass through the [Jigsaw validator](https://jigsaw.w3.org/css-validator/) with no issues found.
+  ![Jigsaw  validator message](img/screenshots/csstest.png)
 
-![Jigsaw validator message](static/images-readme/readme-w3c-css.png)
-
-<!--
 - JS files pass through [JSHint](https://jshint.com/) with no issues found.
 
-![JSHint overview]() -->
+![JSHint overview](img/screenshots/jstest.png)
 
 - page has an excellent Accessibility rating in Lighthouse
 
