@@ -153,15 +153,10 @@ All fonts were obtained from fonts.googleapis (Ready to use template):
 
 ## Testing
 
-1. index.html page not loading:
-
-- Through trial and error, I changed the view code from a class to a function.
-- as well as removed the `.as_view()` from the URL path.
-
 ### Validator Testing
 
 - html files pass through the [W3C validator](https://validator.w3.org/) with no html issues found
-- Errors listed only reference {%%} & {{}} tags.
+  ![HTML validator message](img/screenshots/htmltest.png)
 
 - CSS files pass through the [Jigsaw validator](https://jigsaw.w3.org/css-validator/) with no issues found.
 
