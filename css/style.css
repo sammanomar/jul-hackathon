@@ -726,6 +726,12 @@ header {
 }
 
 
+#team .item .text-content span a:hover {
+  background-color: #fff;
+  color: #45489a;
+}
+
+
 /* Projects Style */
 
 #projects {
@@ -761,13 +767,14 @@ header {
 }
 
 #video .section-heading {
-  margin-bottom: 30px;
+  margin-bottom: 20px;
   text-align: center;
 }
 
 #video .section-heading h1 {
   display: block;
   margin: 0px;
+  letter-spacing: 2px;
 }
 
 #video .section-heading p {
