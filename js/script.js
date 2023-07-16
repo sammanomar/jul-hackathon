@@ -126,12 +126,12 @@ function getPosition() {
 
     });
 
-};
+}
 
 
 async function returnCoordinates() {
     return getPosition();
-};
+}
 
 // Initializes Google maps and displays map
 let map;
@@ -185,7 +185,7 @@ function returnSortedDistanceArray(response) {
         for (let j = 0; j < distancesAndDurations.length; j++) {
             if (sortedDistances[i] == distancesAndDurations[j].distance.value) {
                 sortedDistances[i] = distancesAndDurations[j].distance.text;
-            };
+            }
         }
 
     }
@@ -283,9 +283,8 @@ async function calcDistance() {
         listDistances(response);
         let weatherButton = document.getElementById('weather-button');
         weatherButton.addEventListener('click', listWeather);
-        
+
     });
-    btn.removeEventListener('click', calcDistance)
 }
 
 ////...Weather
