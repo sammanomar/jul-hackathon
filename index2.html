@@ -62,20 +62,20 @@
             const p = document.querySelector('#weather p')
             let openWeatherData = {}
             let xhr = new XMLHttpRequest()
-            xhr.open('GET', `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longtitude}&appid=${weatherApiKey}`)
+            xhr.open('GET', `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longtitude}&appid=1fefee8e8b1a71cebdcd8c7a806ae7a6`)
             xhr.responseType = 'text'
             xhr.addEventListener('load', function () {
                 if (xhr.status === 200) {
-                    p.textContent = "Loading..."
+                    newdiv.textContent = "Loading..."
                     openWeatherData = JSON.parse(xhr.responseText)
-                    weatherInformations(openWeatherData, p)
+                    weatherInformations(openWeatherData, newdiv)
                 } else {
                     p.textContent = 'ERROR' + xhr.status
                 }
             }, false)
             xhr.send()
         }
-        function weatherInformations(openWeatherData, p) {
+        function weatherInformations(openWeatherData, newdiv) {
             const location = openWeatherData.name
             let temp = Math.round(openWeatherData.main.temp)
             let wind = Math.round(openWeatherData.wind.speed)
@@ -96,7 +96,7 @@
                 timeString = `${hrs}:${mins} AM}`
             }
             const str = `${location} ${temp}&#0176;<br> wind: ${wind} m/h <br>Current Time: ${timeString}`
-            p.innerHTML = str
+            newdiv.innerHTML = str
         }
     </script>
 </body>
