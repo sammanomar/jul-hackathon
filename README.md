@@ -122,7 +122,7 @@ All fonts were obtained from fonts.googleapis (Ready to use template):
 
 ![Locations](img/screenshots/locations.png)
 
-#### Find Nearest Surf Location with up to date weather conditons:
+#### Find Nearest Surf Location with up to Date Weather Conditons:
 
 ![Nearest Location](img/screenshots/nearestlocation.png)
 
@@ -163,7 +163,7 @@ All fonts were obtained from fonts.googleapis (Ready to use template):
 
 ![JSHint overview](img/screenshots/jstest.png)
 
-- page has an excellent Accessibility rating in Lighthouse
+- Page has an excellent Accessibility rating in Lighthouse
 
 ![Accessibility score](img/screenshots/lighthouse.png)
 
