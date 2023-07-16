@@ -181,6 +181,9 @@ All fonts were obtained from fonts.googleapis (Ready to use template):
 
 ### Unfixed Bugs
 
+Error at contact page with iframe at W3C HTML Validator. I couldn't fix the issue because the map is 100% responsive. I tried to add a smiliar attributes at css but it didn't respond correctly. Because these attribute are from older version of html but not html5
+(img/screenshots/bug.png)
+
 ## Technologies Used
 
 ### Main Languages Used
@@ -201,9 +204,13 @@ All fonts were obtained from fonts.googleapis (Ready to use template):
 
 ## Deployment
 
-The site was deployed to GitHub.
+The development environment used for this project was GitPod. To track the development stage and handle version control regular commits and pushes to GitHub has been conducted. The GitPod environment was created using a template provided by Code Institute.
 
-- The live link for "WaveFinder" can be found [HERE](https://sammanomar.github.io/jul-hackathon/)
+The live version of the project is deployed at GitHub pages.
+
+The procedure for deployment followed the "Creating your site" steps provided in GitHub Docs.
+
+Log into GitHub. Locate the GitHub Repository that shall be deployed live. At the top of the repository, select Settings from the menu items. Scroll down the Settings page to the ”GitHub Pages" section and click on the ”Check it out here!” At the ”Source” section choose ”main” as Branch and root as folder and click ”Save” The website will deploy and the pages refreshes to provide the live link to the project. The live link can be found here - [HERE](https://sammanomar.github.io/jul-hackathon/)
 
 ## Credits
 
