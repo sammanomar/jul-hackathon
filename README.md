@@ -139,31 +139,9 @@ All fonts were obtained from fonts.googleapis (Ready to use template):
 
 ![Print Details Page](img/screenshots/team.png)
 
-#### Blog Page:
+#### Contact Us:
 
-![Blog Page](static/images-readme/readme-blog.png)
-
-#### Blog Post Details:
-
-![Blog Post Details](static/images-readme/readme-blog-post.png)
-
-#### Log in, Log out & Sign up:
-
-##### Login:
-
-![Login](static/images-readme/readme-signin.png)
-
-##### Logout:
-
-![Logout](static/images-readme/readme-signout.png)
-
-##### Sign-up:
-
-![Sign-up](static/images-readme/readme-signup.png)
-
-#### Social Links:
-
-![Social Links](static/images-readme/readme-sociallinks.png)
+![Blog Page](img/screenshots/contact.png)
 
 ### Features Left to Implement
 
@@ -198,11 +176,7 @@ All fonts were obtained from fonts.googleapis (Ready to use template):
 
 ![Accessibility score](static/images-readme/readme-lighthouse.png)
 
-- Python files passed through [PEP8 Online](http://pep8online.com/) with no issues found.
-
-![PEP8 message](static/images-readme/readme-pep8.png)
-
-- Tested the site opens in Brave, Chrome & Safari without issues.
+- Tested the site opens in Chrome & Safari without issues.
 - All social links open to external pages as intended.
 
 ### Unfixed Bugs
@@ -235,7 +209,7 @@ The site was deployed to GitHub. The steps to deploy are as follows:
 
 - https://templatemo.com/: A website that was the spark of my design for this website
 - https://bootstrapdocs.com/v3.3.1/docs/getting-started/
-- Hackathon team on sequence based on their contribution (Owen Samman, Jawahir Abdul-Bari/Sam Martin, Ghassan Ishag/Vadims J., Sergios Papastergiou)
+- Hackathon team on sequence based on their contribution (Owen Samman/JawahirAbdul-Bari/Sam Martin, Ghassan Ishag/Vadims J., Sergios Papastergiou)
 - Stackoverflow
 - https://www.pexels.com/
 - https://unsplash.com/
