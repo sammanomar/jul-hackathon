@@ -146,6 +146,7 @@ All fonts were obtained from fonts.googleapis (Ready to use template):
 - Link the contact form with email API
 - Allow users to Sign up and make accounts
 - Develop a commercial side for the website
+- Add up to date tide timing to every single location
 
 ## Testing
 
