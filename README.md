@@ -17,7 +17,7 @@ The live link for "WaveFinder website" can be found [HERE](https://sammanomar.gi
   - [Future Goals](#future-goals "Future Goals")
 - [User Stories](#user-stories "User Stories")
 - [Design](#design "Design")
-  - [Colour Scheme](#colour-scheme "Colour Scheme")
+  - [Color Scheme](#color-scheme "Color Scheme")
   - [Typography](#typography "Typography")
   - [Imagery](#imagery "Imagery")
 - [Features](#features "Features")
