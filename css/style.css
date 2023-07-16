@@ -1377,9 +1377,9 @@ nav .active-section span {
 
 }
 
-/* custom css--------------------------------- */
 
-/* google map */
+
+/* findLocation section */
 #map2 {
   height: 350px;
   width: 350px;
@@ -1398,4 +1398,25 @@ nav .active-section span {
 #btn {
   margin: 30px;
   border: 2px solid darkgray;
+  background-color: #e0e0e0;
+  background-position: 0 -15px;
+}
+
+
+.weather-box {
+  padding: 10px 0px;
+  background-color: rgba(122, 122, 122, .15);
+}
+
+.weather-box>p {
+  color: black;
+}
+
+.location-name {
+  font-size: 15px;
+  font-weight: 600;
+}
+
+#loc {
+  padding: 15px 10px;
 }

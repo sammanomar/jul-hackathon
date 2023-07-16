@@ -239,12 +239,12 @@ function listDistances(response) {
     let locationNames = sortLocationNames(response);
     let sortedDistances = returnSortedDistanceArray(response);
     let locationCoords = returnSortedCoords(response);
-    newdiv.innerHTML = '<button id="weather-button">Weather</button>';
+    newdiv.innerHTML = '<button id="weather-button">Weather &#9660;</button>';
     for (let i = 0; i < sortedDistances.length; i++) {
         setWeather(locationCoords[i].lat, locationCoords[i].lng);
 
         loc.innerHTML += `<div>
-                  <a href = 'https://www.google.com/maps/place/${locationNames[i]}' target='_blank' ><p>${locationNames[i]} : ${sortedDistances[i]}</p></a>
+                  <a href = 'https://www.google.com/maps/place/${locationNames[i]}' target='_blank' ><p class ='location-name'>${locationNames[i]} : ${sortedDistances[i]}</p></a>
                   </div>
                   <div id = weather-info-${i}></div>
                       `;
@@ -329,7 +329,7 @@ function weatherInformations(openWeatherData) {
     } else {
         timeString = `${hrs}:${mins} AM}`;
     }
-    const str = `<div>
+    const str = `<div class='weather-box'>
   <p> ${weather}</p>
   <p>Sea Level : ${seaLevel}</p>
          <p>${temp}°C  Wind Speed: ${wind} m/h Current Time: ${timeString}</p>
