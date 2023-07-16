@@ -165,7 +165,7 @@ All fonts were obtained from fonts.googleapis (Ready to use template):
 
 - page has an excellent Accessibility rating in Lighthouse
 
-![Accessibility score](static/images-readme/readme-lighthouse.png)
+![Accessibility score](img/screenshots/lighthouse.png)
 
 - Tested the site opens in Chrome & Safari without issues.
 - All social links open to external pages as intended.
