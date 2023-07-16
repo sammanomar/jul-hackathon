@@ -1,12 +1,18 @@
 //Declare dom elements
 const loc = document.getElementById('loc');
 const btn = document.getElementById('btn');
+const newdiv = document.getElementById('newdiv');
 
 //Current position
 let pos = await returnCoordinates();
+let locationWeather = []
 
 //Surf spots array
 const surfSpots = [
+  {
+    name: "Sennen Cove, Cornwall, England",
+    location: { lat: 50.079444, lng: -5.697389 }
+  },
   {
     name: "Fistral Beach, Cornwall, England",
     location: { lat: 50.418472, lng: -5.098361 },
@@ -86,6 +92,12 @@ for (let i = 0; i < surfSpots.length; i++) {
   locationNames.push(surfSpots[i].name)
 }
 
+//array of location coords
+let locationCoords = []
+for (let i = 0; i < surfSpots.length; i++) {
+  locationCoords.push(surfSpots[i].location)
+}
+
 
 
 //Determine browser location
@@ -108,6 +120,7 @@ function getPosition() {
     }
 
     function error(error) {
+      console.log(error);
       console.log("Sorry, we can\'t retrieve your local weather without location permission.");
     }
 
@@ -138,10 +151,13 @@ async function initMap() {
 
 }
 
+//return weather API
+
+
 //returns API response
 function returnAPIResponse(response) {
   let apiResponse = response
-  console.log(apiResponse);
+
   return apiResponse
 }
 
@@ -191,16 +207,64 @@ function sortLocationNames(response) {
   return locationNames
 }
 
-
-//lists distances to surf spots onto page
-function listDistances(response) {
-  let locationNames = sortLocationNames(response);
+//return sorted coordinates
+function returnSortedCoords(response) {
+  let apiResponse = returnAPIResponse(response);
   let sortedDistances = returnSortedDistanceArray(response);
 
   for (let i = 0; i < sortedDistances.length; i++) {
-    loc.innerHTML += `<a href = 'https://www.google.com/maps/place/${locationNames[i]}' target='_blank' ><p>${locationNames[i]} : ${sortedDistances[i]}</p></a>`;
+    for (let j = 0; j < locationCoords.length; j++) {
+      if (sortedDistances[i] == apiResponse.rows[0].elements[j].distance.text) {
+        locationCoords[i] = surfSpots[j].location
+      }
+    }
   }
+  return locationCoords;
 }
+
+//return weather from coords
+function returnLocationWeather(response) {
+  let locationCoords = returnSortedCoords(response);
+
+  for (let i = 0; i < locationCoords.length; i++) {
+    setWeather(locationCoords[i].lat, locationCoords[i].lng)
+  }
+
+}
+
+
+//lists distances to surf spots onto page
+function listDistances(response) {
+
+  let locationNames = sortLocationNames(response);
+  let sortedDistances = returnSortedDistanceArray(response);
+  let locationCoords = returnSortedCoords(response);
+  newdiv.innerHTML = '<button id="weather-button">Weather</button>'
+  for (let i = 0; i < sortedDistances.length; i++) {
+    setWeather(locationCoords[i].lat, locationCoords[i].lng);
+
+    loc.innerHTML += `<div>
+                  <a href = 'https://www.google.com/maps/place/${locationNames[i]}' target='_blank' ><p>${locationNames[i]} : ${sortedDistances[i]}</p></a>
+                  </div>
+                  <div id = weather-info-${i}></div>
+                      `;
+
+  }
+
+}
+
+
+
+
+//lists weather beneath location
+function listWeather() {
+  for (let i = 0; i < locationWeather.length; i++) {
+    let weatherInfoI = document.getElementById(`weather-info-${i}`);
+    weatherInfoI.innerHTML = locationWeather[i];
+  }
+
+}
+
 
 // Calculate distance
 async function calcDistance() {
@@ -215,9 +279,63 @@ async function calcDistance() {
     avoidTolls: false,
   }
   service.getDistanceMatrix(request).then((response) => {
+    returnLocationWeather(response);
     listDistances(response);
+    let weatherButton = document.getElementById('weather-button')
+    weatherButton.addEventListener('click', listWeather)
+
   });
 }
+
+////...Weather
+function setWeather(lat, lng) {
+  let openWeatherData = {}
+  let xhr = new XMLHttpRequest()
+  xhr.open('GET', `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lng}&units=metric&appid=1fefee8e8b1a71cebdcd8c7a806ae7a6`);
+  xhr.responseType = 'text'
+  xhr.addEventListener('load', function () {
+    if (xhr.status === 200) {
+      openWeatherData = JSON.parse(xhr.responseText)
+      weatherInformations(openWeatherData)
+    } else {
+      console.log(xhr.status);
+    }
+  }, false)
+  xhr.send()
+}
+
+
+
+function weatherInformations(openWeatherData) {
+  let weather = `${openWeatherData.weather[0].main} : ${openWeatherData.weather[0].description} `;
+  let temp = Math.round(openWeatherData.main.temp);
+  let seaLevel = openWeatherData.main.sea_level;
+  let wind = Math.round(openWeatherData.wind.speed)
+  let time = new Date(openWeatherData.dt * 1000)
+  let hrs = time.getHours()
+  let mins = time.getMinutes()
+  let timeString = ''
+  if (mins < 10) {
+    mins = `0${mins}`
+  }
+  if (hrs === 12) {
+    timeString = `12:${mins} PM`
+  } else if (hrs > 12) {
+    timeString = `${hrs - 12}:${mins} PM`
+  } else if (hrs === 0) {
+    timeString = `12:${mins} AM`
+  } else {
+    timeString = `${hrs}:${mins} AM}`
+  }
+  const str = `<div>
+  <p> ${weather}</p>
+  <p>Sea Level : ${seaLevel}</p>
+         <p>${temp}°C  Wind Speed: ${wind} m/h Current Time: ${timeString}</p>
+          </div>`
+  console.log(str);
+  locationWeather.push(str);
+}
+
 
 function app() {
   initMap();
