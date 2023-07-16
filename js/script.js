@@ -251,6 +251,8 @@ function listDistances(response) {
 
     }
 
+    btn.removeEventListener('click', calcDistance);
+
 }
 
 
@@ -332,7 +334,6 @@ function weatherInformations(openWeatherData) {
   <p>Sea Level : ${seaLevel}</p>
          <p>${temp}°C  Wind Speed: ${wind} m/h Current Time: ${timeString}</p>
           </div>`;
-    console.log(str);
     locationWeather.push(str);
 }
 
