@@ -40,7 +40,7 @@ The intent of the site is to bring surfers together. [“WaveFinder”](https://
 
 ### Site Goal:
 
-To build a platform that allows surfers to find all what they want to know about surfing events nearby them around UK.
+To build a platform that allows surfers to find all what they want to know about nearby surfing events around UK.
 
 ### Audience:
 
@@ -60,9 +60,9 @@ With a clean, easy to follow layout, the site users are guided through the featu
 
 ### Future Goals:
 
-- Link the contact form with real email API
+- Link the contact form with email API
 - Allow users to Sign up and make accounts
-- To create a commercial side for the website
+- Create a commercial side for the website
 
 ## User Stories
 
@@ -201,15 +201,15 @@ All fonts were obtained from fonts.googleapis (Ready to use template):
 
 ## Deployment
 
-The site was deployed to GitHub. The steps to deploy are as follows:
+The site was deployed to GitHub.
 
 - The live link for "WaveFinder" can be found [HERE](https://sammanomar.github.io/jul-hackathon/)
 
 ## Credits
 
-- https://templatemo.com/: A website that was the spark of my design for this website
+- https://templatemo.com/: A website that was the spark of our design for this website
 - https://bootstrapdocs.com/v3.3.1/docs/getting-started/
-- Hackathon team on sequence based on their contribution (Owen Samman/JawahirAbdul-Bari/Sam Martin, Ghassan Ishag/Vadims J., Sergios Papastergiou)
+- Hackathon team on sequence based on contribution (Owen Samman/JawahirAbdul-Bari/Sam Martin, Ghassan Ishag/Vadims J., Sergios Papastergiou)
 - Stackoverflow
 - https://www.pexels.com/
 - https://unsplash.com/
