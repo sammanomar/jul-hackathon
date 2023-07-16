@@ -99,7 +99,7 @@ USER STORIES:
 
 ### Colour Scheme:
 
-![Colour Palette](img/screenshots/colorschema.png)
+![Color Palette](img/screenshots/colorschema.png)
 
 ### Typography:
 
@@ -119,27 +119,27 @@ All fonts were obtained from fonts.googleapis (Ready to use template):
 
 #### Featured Locations:
 
-![Navbar desktop](img/screenshots/locations.png)
+![Locations](img/screenshots/locations.png)
 
 #### Find Nearest Surf Location:
 
-![Navbar mobile]()
+![Nearest Location](img/screenshots/nearestlocation.png)
 
 #### Recent Photos:
 
-![About page](img/screenshots/photos.png)
+![Recent Photos](img/screenshots/photos.png)
 
 #### Our Story:
 
-![Prints Page](img/screenshots/story.png)
+![Video](img/screenshots/story.png)
 
 #### Our Team:
 
-![Print Details Page](img/screenshots/team.png)
+![Team](img/screenshots/team.png)
 
 #### Contact Us:
 
-![Blog Page](img/screenshots/contact.png)
+![Contact](img/screenshots/contact.png)
 
 ### Features Left to Implement
 
