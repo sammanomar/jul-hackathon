@@ -43,7 +43,7 @@ const surfSpots = [
     },
     {
         name: "Kimmeridge Bay, Dorset, England",
-        location: { lat: 50.611111, lng: -2.130472 },
+        location: { lat: 50.61210, lng: -2.13079 },
     },
     {
         name: "Llangennith, Gower Peninsula, Wales",
@@ -67,11 +67,11 @@ const surfSpots = [
     },
     {
         name: "Dalmore Bay, Isle of Lewis, Scotland",
-        location: { lat: 58.305722, lng: -6.757472 },
+        location: { lat: 58.30661, lng: -6.75709 },
     },
     {
         name: "Portrush East Strand, County Antrim, Northern Ireland",
-        location: { lat: 55.20479, lng: -6.64771 },
+        location: { lat: 55.20463, lng: -6.64790 },
     },
     {
         name: "Lahinch, County Clare, Ireland",
