@@ -851,9 +851,6 @@ header {
   transition: all .6s .8s;
 }
 
-
-
-
 /* Blog Style */
 
 #blog {
@@ -1039,6 +1036,40 @@ header {
 }
 
 
+/* Thank you page Style */
+
+#thanks {
+  text-align: center;
+  background-color: #f4f4f4;
+  padding: 100px 60px;
+}
+
+#thanks .section-heading {
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+#thanks .section-heading i {
+  display: block;
+  margin: 6px;
+  font-size: larger;
+}
+
+#thanks .section-heading h1{
+  display: block;
+  margin: 6px;
+}
+
+#thanks .text-content h4 {
+  position: relative;
+  margin: 7px;
+}
+
+#thanks .accent-button {
+  margin: 30px;
+}
+
+
 
 /* Footer Style */
 
@@ -1066,7 +1097,31 @@ header {
   font-weight: 600;
 }
 
+.footer #thankyou{
+  bottom: 0px;
+  position: fixed;
+}
 
+/* Modal Style */
+
+.modal-title {
+  font-size: 3rem;
+  font-family: 'Pangolin', sans-serif;
+  text-align: center;
+  font-weight: 700;
+  color: #de7a29;
+}
+
+.modal-body h3 {
+  font-family: 'Pangolin', sans-serif;
+}
+
+.modal-dialog-centered {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
 
 /* Responsive Style */
 
@@ -1200,6 +1255,11 @@ header {
   }
 
   #contact-content {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  #thanks {
     padding-left: 15px;
     padding-right: 15px;
   }
