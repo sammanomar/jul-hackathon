@@ -14,7 +14,7 @@ The live link for "WaveFinder website" can be found [HERE](https://sammanomar.gi
   - [Audience](#audience "Audience")
   - [Communication](#communication "Communication")
   - [Current User Goals](#current-user-goals "Current User Goals")
-  - [New User Goals](#new-user-goals "New User Goals")
+  - [Future Goals](#future-goals "Future Goals")
 - [User Stories](#user-stories "User Stories")
 - [Design](#design "Design")
   - [Colour Scheme](#colour-scheme "Colour Scheme")
@@ -28,6 +28,7 @@ The live link for "WaveFinder website" can be found [HERE](https://sammanomar.gi
 - [Technologies Used](#technologies-used "Technologies Used")
   - [Main Languages Used](#main-languages-used "Main Languages Used")
   - [Frameworks, Libraries & Programs Used](#frameworks-libraries-programs-used "Frameworks, Libraries & Programs Used")
+- [Deployment](#deployment "Deployment")
 - [Credits](#credits "Credits")
 
 ## UX
@@ -97,7 +98,7 @@ USER STORIES:
 
 ![Desktop Home](img/screenshots/wireframe.png)
 
-### Colour Scheme:
+### Color Scheme:
 
 ![Color Palette](img/screenshots/colorschema.png)
 
@@ -121,7 +122,7 @@ All fonts were obtained from fonts.googleapis (Ready to use template):
 
 ![Locations](img/screenshots/locations.png)
 
-#### Find Nearest Surf Location:
+#### Find Nearest Surf Location with up to date weather conditons:
 
 ![Nearest Location](img/screenshots/nearestlocation.png)
 
