@@ -260,7 +260,7 @@ function listDistances(response) {
 function listWeather() {
   for (let i = 0; i < locationWeather.length; i++) {
     let weatherInfoI = document.getElementById(`weather-info-${i}`);
-    weatherInfoI.innerText = locationWeather[i];
+    weatherInfoI.innerHTML = locationWeather[i];
   }
 
 }
@@ -291,7 +291,7 @@ async function calcDistance() {
 function setWeather(lat, lng) {
   let openWeatherData = {}
   let xhr = new XMLHttpRequest()
-  xhr.open('GET', `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lng}&unit=metric&appid=1fefee8e8b1a71cebdcd8c7a806ae7a6`);
+  xhr.open('GET', `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lng}&units=metric&appid=1fefee8e8b1a71cebdcd8c7a806ae7a6`);
   xhr.responseType = 'text'
   xhr.addEventListener('load', function () {
     if (xhr.status === 200) {
@@ -307,8 +307,9 @@ function setWeather(lat, lng) {
 
 
 function weatherInformations(openWeatherData) {
-  const location = openWeatherData.name
-  let temp = Math.round(openWeatherData.main.temp)
+  let weather = `${openWeatherData.weather[0].main} : ${openWeatherData.weather[0].description} `;
+  let temp = Math.round(openWeatherData.main.temp);
+  let seaLevel = openWeatherData.main.sea_level;
   let wind = Math.round(openWeatherData.wind.speed)
   let time = new Date(openWeatherData.dt * 1000)
   let hrs = time.getHours()
@@ -326,7 +327,11 @@ function weatherInformations(openWeatherData) {
   } else {
     timeString = `${hrs}:${mins} AM}`
   }
-  const str = `${location} ${temp}&#0176;<br> wind: ${wind} m/h <br>Current Time: ${timeString}`
+  const str = `<div>
+  <p> ${weather}</p>
+  <p>Sea Level : ${seaLevel}</p>
+         <p>${temp}°C  Wind Speed: ${wind} m/h Current Time: ${timeString}</p>
+          </div>`
   console.log(str);
   locationWeather.push(str);
 }
