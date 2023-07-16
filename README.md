@@ -181,8 +181,8 @@ All fonts were obtained from fonts.googleapis (Ready to use template):
 
 ### Unfixed Bugs
 
-Error at contact page with iframe at W3C HTML Validator. I couldn't fix the issue because the map is 100% responsive. I tried to add a smiliar attributes at css but it didn't respond correctly. Because these attribute are from older version of html but not html5
-(img/screenshots/bug.png)
+Error at contact page with iframe at W3C HTML Validator. I couldn't fix the issue because the map is 100% responsive. I tried to add a smiliar attributes at css but it didn't respond correctly. Because these attribute are from older version of html but not html5.
+![Unfixed Bugs](img/screenshots/bug.png)
 
 ## Technologies Used
 
