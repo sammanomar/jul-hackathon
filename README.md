@@ -2,9 +2,9 @@
 
 WaveFinder is a website that targets surfers. This website is for surfers who want to find the nearest surfing spots around UK. By allowing browser location feature it allows surfers to find the nearest spots for surfing. Site users can see information about our featured locations, latest photos from our latest events and our upcoming events.
 
-![Site view across devices](static/images-readme/readme-amiresponsive.png)
+![Site view across devices](img/screenshots/home.png)
 
-The live link for "Technology blog" can be found [HERE](https://bllog-30ebbac877ad.herokuapp.com/)
+The live link for "WaveFinder website" can be found [HERE](https://sammanomar.github.io/jul-hackathon/)
 
 ## Table of Contents
 
@@ -41,77 +41,60 @@ The live link for "Technology blog" can be found [HERE](https://bllog-30ebbac877
 
 ### Site Purpose:
 
-The intent of the site is to bring technologists together. [“Technology blog”](https://bllog-30ebbac877ad.herokuapp.com/) Is an online technology network platform where site users can stay up to date with anything related to technology.
+The intent of the site is to bring surfers together. [“WaveFinder”](https://sammanomar.github.io/jul-hackathon/) Is an online network platform where surfers can stay up to date with surfing events around UK.
 
 ### Site Goal:
 
-To build a platform that allows technology lovers to find all what they want to know about latest cutting edge technologies world wide whether by reading posts or writting posts as well.
+To build a platform that allows surfers to find all what they want to know about surfing events nearby them around UK.
 
 ### Audience:
 
-For anyone who have a passion for technology in their lives. This website have no restrictions at all over user age.
+For surfers. This website have no restrictions at all over user age.
 
 ### Communication:
 
-With a clean, easy to follow layout, the user - both writers and readers alike - are guided through the features of the website with an ease of navigation.
+With a clean, easy to follow layout, the site users are guided through the features of the website with an ease of navigation.
 
 ### Current User Goals:
 
-- To allow users or bloggers to easily be able to create their own profiles, post their articles and posts to the technology world, view all their posts, edit, update them and delete them.
-- To view all the available technology posts, articles and blogs created by bloggers both on their profile page, and by clicking on the blogger name when viewing a technology post, category or tag.
-- Interact with other bloggers (by comments, likes, follows) and stay up to date with the technlogy world.
-- To receive a notification with every single follow, comment or like with an additonal feature to mute the notifications.
-- To search posts using key words in the website using the search box feature.
-- To filter the posts in the website by categories, tag clouds and users.
-- to see the recent and latest posts.
-- to see any related posts when you open any post.
-- to see the total number of posts at the top of blogs page.
+- To allow users or surfers to identify the nearst surfing location around them in UK.
+- To view the featured surfing locations around UK.
+- To view the recent photos of our latest surfing events.
+- To see our upcoming surfing events
+- To get in touch with us using a contact form.
 
 ### Future Goals:
 
-- To linke the notification system with the provided email addresses by the users for any new posts, likes or comments
-- To share any posts with other users at facebook, twitter and social media.
-- To create a commercial side for the website or the app connecting with technology institutes, universities, companies, and organizations that might have an interest to post ads for related courses, jobs and events at the website. Moreover, add a monthly and yearly subscriptions plans.
+- Link the contact form with real email API
+- Allow users to Sign up and make accounts
+- To create a commercial side for the website
 
 ## User Stories
 
 All stories have been implemented.
 
-USER STORY: Crud operation on blogs
+USER STORIES:
 
-1. As a **site user and admin** I can **I can view a list of posts** so that **I can create, read, update and delete them**
-   USER STORY: Create Custom user model
-2. As a **admin** I can **create a database in django** so that **I can apply CRUD operation on it**
-   USER STORY: Registration/Authentication through username
-3. As a **Site User/Admin** I can **I can register an account** so that **I can have my own blog**
-   USER STORY: Registration/Authentication through email
-4. As a **Site User/Admin** I can **register an account** so that **I can have my own blog**
-   USER STORY: Personal profile management
-5. As a **Site User** I can **have and manage my personal profile** so that **I can update it, see my own blogs and have a full control on it**
-   USER STORY: Filter blogs by different criteria (title, category, tags)
-6. As a **Site User** I can **filter blogs by different criteria** so that **I can easily find my preferences**
-   USER STORY: Search blogs by different criteria
-7. As a **Site User** I can **search blogs by different criteria** so that **I reach easily to my preferred blogs**
-   USER STORY: Like blogs
-8. As a **Site User** I can **like blogs** so that **I can interact with the content**
-   USER STORY: Comment and replies on blogs
-9. As a **Site User** I can **comment and reply on blogs** so that **I can interact with others in the website**
-   USER STORY: Follow and unfollow other users
-10. As a **Site User** I can **follow and unfollow other user** so that **I can keep myself posted about my favorite users**
-    USER STORY: Implementing generic relations
-11. As a **site user** I can **receive notifications when someone post, comment, like or follow me** so that **I can stay connected**
-    USER STORY: Notification system
-12. As a **Site User** I can **receive notifications when users like or write comments** so that **I can interact with other users**
-    USER STORY: Mute/unmute notifications
-13. As a **Site User** I can **mute and unmute notifications** so that **I can be selective over my notifications preferences**
-    USER STORY: Deployment on Heroku
-14. As a **Admin** I can **deploy my blog project** so that **other users can access it**
-    USER STORY: Models Creation
-15. As an **Admin** I can **create categories, tags, blogs, comments, replies posts** so that **I can admin them in Django database**
-    USER STORY: Site Pagination
-16. As a **Site USer** I can **view a paginated list of posts** so that **easily select a post to view**
-    USER STORY: View Others Profile
-17. As a **Site user** I can **view others profile** so that **I can see the number of posts, posts, following and followers number**
+1. As a **site creator** I can **deploy the project** so that **I can move it to production phase**
+   USER STORY: Deploy Project
+2. As a **site creator** I create index page \***\* so that **I can see how my page looks like\*\*
+   USER STORY: Create Index Page
+3. As a **site user** I can **see a video at home page** so that **I have a better insight about the website**
+   USER STORY: Presentation Video
+4. As a **reviewer** I can **read a summary about the project** so that **I can better understand the website goals**
+   USER STORY: Readme File
+5. As a **site user** I can **allow the browser to access my location** so that **I can see the nearest surfing location**
+   USER STORY: Add browser location API
+6. As a **site user** I can **view the tide times at my chosen surf location** so that **I can decide if there will be enough surfing time left by the time I arrive at the destination**
+   USER STORY: Tide Timing(Not Implemented)
+7. As a **site user** I can **get up to date weather conditions** so that **I can decide the right day to surf**
+   USER STORY: Add Weather Forecast
+8. As a **site user** I can **see the information of the surfing team** so that **I can get in touch with them**
+   USER STORY: Team information
+9. As a **site user** I can **read about the upcoming events** so that **I can decide which event to join**
+   USER STORY: Surfing theme and Content of the Website
+10. As a **site user** I can **see the list of UK surfing locations to use** so that **I can pick the best location**
+    USER STORY: List of UK surfing locations to use
 
 ## Design
 
