@@ -122,9 +122,10 @@ All fonts were obtained from fonts.googleapis (Ready to use template):
 
 ![Locations](img/screenshots/locations.png)
 
-#### Find Nearest Surf Location with up to Date Weather Conditons:
+#### Find Nearest Surf Location with an up to Date Weather Conditons:
 
 ![Nearest Location](img/screenshots/nearestlocation.png)
+![Weather Condition](img/screenshots/weather.png)
 
 #### Recent Photos:
 
