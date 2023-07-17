@@ -70,26 +70,43 @@ All stories have been implemented.
 USER STORIES:
 
 1. USER STORY: Deploy Project
-As a **site creator** I can **deploy the project** so that **I can move it to production phase**
-   
-2. As a **site creator** I create index page \***\* so that **I can see how my page looks like\*\*
-   
-3. As a **site user** I can **see a video at home page** so that **I have a better insight about the website**
-   USER STORY: Presentation Video
-4. As a **reviewer** I can **read a summary about the project** so that **I can better understand the website goals**
-   USER STORY: Readme File
-5. As a **site user** I can **allow the browser to access my location** so that **I can see the nearest surfing location**
-   USER STORY: Add browser location API
-6. As a **site user** I can **view the tide times at my chosen surf location** so that **I can decide if there will be enough surfing time left by the time I arrive at the destination**
-   USER STORY: Tide Timing(Not Implemented)
-7. As a **site user** I can **get up to date weather conditions** so that **I can decide the right day to surf**
-   USER STORY: Add Weather Forecast
-8. As a **site user** I can **see the information of the surfing team** so that **I can get in touch with them**
-   USER STORY: Team information
-9. As a **site user** I can **read about the upcoming events** so that **I can decide which event to join**
-   USER STORY: Surfing theme and Content of the Website
+
+- As a **site creator** I can **deploy the project** so that **I can move it to production phase**
+
+2. USER STOEY: Create Index Page
+
+- As a **site creator** I create **index page** so that **I can see how my page looks like**
+
+3. USER STORY: Presentation Video
+
+- As a **site user** I can **see a video at home page** so that **I have a better insight about the website**
+
+4. USER STORY: Readme File
+
+- As a **reviewer** I can **read a summary about the project** so that **I can better understand the website goals**
+
+5. USER STORY: Add browser location API
+
+- As a **site user** I can **allow the browser to access my location** so that **I can see the nearest surfing location**
+
+6. USER STORY: Tide Timing(Not Implemented)
+
+- As a **site user** I can **view the tide times at my chosen surf location** so that **I can decide if there will be enough surfing time left by the time I arrive at the destination**
+
+7. USER STORY: Add Weather Forecast
+
+- As a **site user** I can **get up to date weather conditions** so that **I can decide the right day to surf**
+
+8. USER STORY: Team information
+
+- As a **site user** I can **see the information of the surfing team** so that **I can get in touch with them**
+
+9. USER STORY: Surfing theme and Content of the Website
+
+- As a **site user** I can **read about the upcoming events** so that **I can decide which event to join**
+10. USER STORY: List of UK surfing locations to use
 10. As a **site user** I can **see the list of UK surfing locations to use** so that **I can pick the best location**
-    USER STORY: List of UK surfing locations to use
+    
 
 ## Design
 
