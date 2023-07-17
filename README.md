@@ -104,9 +104,10 @@ USER STORIES:
 9. USER STORY: Surfing theme and Content of the Website
 
 - As a **site user** I can **read about the upcoming events** so that **I can decide which event to join**
+
 10. USER STORY: List of UK surfing locations to use
-10. As a **site user** I can **see the list of UK surfing locations to use** so that **I can pick the best location**
-    
+
+- As a **site user** I can **see the list of UK surfing locations to use** so that **I can pick the best location**
 
 ## Design
 
