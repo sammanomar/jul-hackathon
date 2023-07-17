@@ -29,9 +29,15 @@ p {
 }
 
 .section-heading {
-  text-align: left;
+  text-align: center;
   position: relative;
   margin-bottom: 60px;
+}
+
+
+.find-location-heading {
+  position: relative;
+  margin-bottom: 40px;
 }
 
 .section-heading h1 {
@@ -1407,6 +1413,10 @@ nav .active-section span {
   #thanks {
     padding-left: 15px;
     padding-right: 15px;
+  }
+
+  .thank-logo{
+    width: 100%;
   }
 
 }
