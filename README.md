@@ -238,7 +238,7 @@ Log into GitHub. Locate the GitHub Repository that shall be deployed live. At th
 
 - https://templatemo.com/: A website that was the spark of our design for this website
 - https://bootstrapdocs.com/v3.3.1/docs/getting-started/
-- Hackathon team on sequence based on contribution (Owen Samman/Sam Martin/JawahirAbdul-Bari, Ghassan Ishag/Vadims J., Sergios Papastergiou)
+- Hackathon team -Owen Samman, Sam Martin, JawahirAbdul-Bari, Ghassan Ishag, Vadims J., Sergios Papastergiou
 - Stackoverflow
 - https://www.pexels.com/
 - https://unsplash.com/
