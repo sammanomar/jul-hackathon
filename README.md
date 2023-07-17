@@ -1,6 +1,6 @@
 # WaveFinder Website
 
-WaveFinder is a website that targets surfers. This website is for surfers who want to find the nearest surfing spots around UK. By allowing browser location feature it allows surfers to find the nearest spots for surfing. Site users can see information about our featured locations, latest photos from our latest events and our upcoming events.
+WaveFinder is a website that targets surfers. This website is for surfers who want to find the nearest surfing spots around UK. By allowing browser location feature it allows surfers to find the nearest spots for surfing. Site users can see information about our featured locations, direction to the locations, up to date weather conditions, latest photos from our latest events and our upcoming events.
 
 ![Site view across devices](img/screenshots/home.png)
 
@@ -54,13 +54,14 @@ With a clean, easy to follow layout, the site users are guided through the featu
 
 - To allow users or surfers to identify the nearst surfing location around them in UK.
 - To view the featured surfing locations around UK.
+- To view the direction and up to date weather conditions at the spots
 - To view the recent photos of our latest surfing events.
 - To see our upcoming surfing events
 - To get in touch with us using a contact form.
 
 ### Future Goals:
 
-- Link the contact form with email API
+- Link the contact form with an email API
 - Allow users to Sign up and make accounts
 - Develop a commercial side for the website
 
@@ -169,7 +170,7 @@ All fonts were obtained from fonts.googleapis (Ready to use template):
 - Allow users to Sign up and make accounts
 - Allow users add new surf locations
 - Develop a commercial side for the website
-- Add up to date tide timing to every single location
+- Add an up to date tide timing to every single location
 
 ## Testing
 
