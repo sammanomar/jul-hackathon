@@ -69,10 +69,11 @@ All stories have been implemented.
 
 USER STORIES:
 
-1. As a **site creator** I can **deploy the project** so that **I can move it to production phase**
-   USER STORY: Deploy Project
+1. USER STORY: Deploy Project
+As a **site creator** I can **deploy the project** so that **I can move it to production phase**
+   
 2. As a **site creator** I create index page \***\* so that **I can see how my page looks like\*\*
-   USER STORY: Create Index Page
+   
 3. As a **site user** I can **see a video at home page** so that **I have a better insight about the website**
    USER STORY: Presentation Video
 4. As a **reviewer** I can **read a summary about the project** so that **I can better understand the website goals**
