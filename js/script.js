@@ -232,10 +232,19 @@ function listDistances(response) {
         setWeather(locationCoords[i].lat, locationCoords[i].lng);
 
         loc.innerHTML += `<div class = 'loc-and-dist'>
-                  <a href = 'https://www.google.com/maps/place/${locationNames[i]}' target='_blank' ><p class ='location-name'>${locationNames[i]} : ${sortedDistances[i]} <i class="fa fa-external-link" aria-hidden="true"></i> </p></a>
+                  <a href = 'https://www.google.com/maps/place/${locationNames[i]}' target='_blank' >
+                  <p class ='location-name'>${locationNames[i]} : ${sortedDistances[i]} <i class="fa fa-external-link" aria-hidden="true"></i> </p></a>
+                  <a href = 'https://www.google.com/maps/dir/${pos.lat},${pos.lng}/${locationNames[i]}' target='_blank' ><p class ='directions'>Get Directions</p></a>
                   </div>
                   <div id = weather-info-${i}></div>
                       `;
+
+        // loc.innerHTML += `<div class = 'loc-and-dist'>
+        //               <a href = 'https://www.google.com/maps/dir/${pos.lat},${pos.lng}/${locationNames[i]}' target='_blank' >
+        //               <p class ='location-name'>${locationNames[i]} : ${sortedDistances[i]} <i class="fa fa-external-link" aria-hidden="true"></i> </p></a>
+        //               </div>
+        //               <div id = weather-info-${i}></div>
+        //                   `;
 
     }
 
@@ -257,7 +266,7 @@ function listWeather() {
         weatherInfoI.innerHTML = locationWeather[i];
     }
 
-    
+
 
 }
 
@@ -331,7 +340,7 @@ function weatherInformations(openWeatherData) {
     } else if (hrs === 0) {
         timeString = `12:${mins} AM`;
     } else {
-        timeString = `${hrs}:${mins} AM}`;
+        timeString = `${hrs}:${mins} AM`;
     }
     const str = `<div class='weather-box'>
   <p> ${weather}</p>
