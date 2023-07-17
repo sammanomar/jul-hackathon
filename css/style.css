@@ -562,9 +562,6 @@ nav .active-section span {
   border-bottom: 1px solid #eee;
 }
 
-#featured .section-heading {
-  margin-right: 20%;
-}
 
 #featured .content-section {
   display: inline-block;
@@ -701,9 +698,7 @@ nav .active-section span {
   border-bottom: 1px solid #45489a;
 }
 
-#team .section-heading {
-  margin-right: 20%;
-}
+
 
 #team .content-section {
   display: inline-block;
