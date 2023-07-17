@@ -243,8 +243,8 @@ function listDistances(response) {
     for (let i = 0; i < sortedDistances.length; i++) {
         setWeather(locationCoords[i].lat, locationCoords[i].lng);
 
-        loc.innerHTML += `<div>
-                  <a href = 'https://www.google.com/maps/place/${locationNames[i]}' target='_blank' ><p class ='location-name'>${locationNames[i]} : ${sortedDistances[i]}</p></a>
+        loc.innerHTML += `<div class = 'loc-and-dist'>
+                  <a href = 'https://www.google.com/maps/place/${locationNames[i]}' target='_blank' ><p class ='location-name'>${locationNames[i]} : ${sortedDistances[i]} <i class="fa fa-external-link" aria-hidden="true"></i> </p></a>
                   </div>
                   <div id = weather-info-${i}></div>
                       `;
@@ -261,7 +261,7 @@ function listDistances(response) {
 //lists weather beneath location
 function listWeather() {
     let weatherButton = document.getElementById('weather-button');
-    weatherButton.innerText = 'Weather ▲';
+    weatherButton.innerText = 'Weather  ▲';
     weatherButton.removeEventListener('click', listWeather);
     weatherButton.addEventListener('click', hideWeather);
     for (let i = 0; i < locationWeather.length; i++) {
@@ -276,7 +276,7 @@ function listWeather() {
 //hides weather
 function hideWeather() {
     let weatherButton = document.getElementById('weather-button');
-    weatherButton.innerText = `Weather ▼`;
+    weatherButton.innerText = `Weather  ▼`;
     weatherButton.removeEventListener('click', hideWeather);
     weatherButton.addEventListener('click', listWeather);
     for (let i = 0; i < locationWeather.length; i++) {

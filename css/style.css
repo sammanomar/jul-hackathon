@@ -1417,6 +1417,10 @@ nav .active-section span {
   font-weight: 600;
 }
 
+.loc-and-dist{
+  margin: 15px 0px;
+}
+
 #loc {
   padding: 15px 10px;
 }
