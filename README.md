@@ -209,6 +209,7 @@ Error at contact page with iframe at W3C HTML Validator. I couldn't fix the issu
 - jQuery
 
 ### APIs Used
+
 - [Geolocation API](https://www.example.com) - Built in HTML API which is used to get the user's current browser location
 - [Maps JavaScript API](https://developers.google.com/maps/documentation/javascript/overview) - Google Maps API which is used to display a map with user's current location
 - [Distance Matrix API](https://developers.google.com/maps/documentation/distance-matrix/overview) - Google Maps API which is used here to determine the distance to each surfing location from the user
@@ -221,7 +222,6 @@ Error at contact page with iframe at W3C HTML Validator. I couldn't fix the issu
 - GitPod/Codeanywhere - to create my html files & styling sheet before pushing the project to Github.
 - GitHub - to store my repository for submission.
 - Bootstrap
-- jQuery
 
 ## Deployment
 
