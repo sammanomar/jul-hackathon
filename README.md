@@ -27,6 +27,7 @@ The live link for "WaveFinder website" can be found [HERE](https://sammanomar.gi
   - [Unfixed Bugs](#unfixed-bugs "Unfixed Bugs")
 - [Technologies Used](#technologies-used "Technologies Used")
   - [Main Languages Used](#main-languages-used "Main Languages Used")
+  - [APIs Used](#apis-used "APIs Used")
   - [Frameworks, Libraries & Programs Used](#frameworks-libraries-programs-used "Frameworks, Libraries & Programs Used")
 - [Deployment](#deployment "Deployment")
 - [Credits](#credits "Credits")
@@ -166,6 +167,7 @@ All fonts were obtained from fonts.googleapis (Ready to use template):
 
 - Link the contact form with email API
 - Allow users to Sign up and make accounts
+- Allow users add new surf locations
 - Develop a commercial side for the website
 - Add up to date tide timing to every single location
 
@@ -205,6 +207,12 @@ Error at contact page with iframe at W3C HTML Validator. I couldn't fix the issu
 - CSS3
 - Javascript
 - jQuery
+
+### APIs Used
+- [Geolocation API](https://www.example.com) - Built in HTML API which is used to get the user's current browser location
+- [Maps JavaScript API](https://developers.google.com/maps/documentation/javascript/overview) - Google Maps API which is used to display a map with user's current location
+- [Distance Matrix API](https://developers.google.com/maps/documentation/distance-matrix/overview) - Google Maps API which is used here to determine the distance to each surfing location from the user
+- [OpenWeather](https://openweathermap.org/api) - API which provides real time weather info. Used to display current weather at each surf location
 
 ### Frameworks, Libraries & Programs Used
 
