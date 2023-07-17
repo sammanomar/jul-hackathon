@@ -1415,6 +1415,7 @@ nav .active-section span {
 .location-name {
   font-size: 15px;
   font-weight: 600;
+  margin-bottom: 0px;
 }
 
 .loc-and-dist{
@@ -1423,4 +1424,8 @@ nav .active-section span {
 
 #loc {
   padding: 15px 10px;
+}
+
+.directions{
+  font-size: smaller;
 }
