@@ -14,10 +14,10 @@ The live link for "WaveFinder website" can be found [HERE](https://sammanomar.gi
   - [Audience](#audience "Audience")
   - [Communication](#communication "Communication")
   - [Current User Goals](#current-user-goals "Current User Goals")
-  - [New User Goals](#new-user-goals "New User Goals")
+  - [Future Goals](#future-goals "Future Goals")
 - [User Stories](#user-stories "User Stories")
 - [Design](#design "Design")
-  - [Colour Scheme](#colour-scheme "Colour Scheme")
+  - [Color Scheme](#color-scheme "Color Scheme")
   - [Typography](#typography "Typography")
   - [Imagery](#imagery "Imagery")
 - [Features](#features "Features")
@@ -28,6 +28,7 @@ The live link for "WaveFinder website" can be found [HERE](https://sammanomar.gi
 - [Technologies Used](#technologies-used "Technologies Used")
   - [Main Languages Used](#main-languages-used "Main Languages Used")
   - [Frameworks, Libraries & Programs Used](#frameworks-libraries-programs-used "Frameworks, Libraries & Programs Used")
+- [Deployment](#deployment "Deployment")
 - [Credits](#credits "Credits")
 
 ## UX
@@ -97,9 +98,9 @@ USER STORIES:
 
 ![Desktop Home](img/screenshots/wireframe.png)
 
-### Colour Scheme:
+### Color Scheme:
 
-![Colour Palette](img/screenshots/colorschema.png)
+![Color Palette](img/screenshots/colorschema.png)
 
 ### Typography:
 
@@ -119,33 +120,34 @@ All fonts were obtained from fonts.googleapis (Ready to use template):
 
 #### Featured Locations:
 
-![Navbar desktop](img/screenshots/locations.png)
+![Locations](img/screenshots/locations.png)
 
-#### Find Nearest Surf Location:
+#### Find Nearest Surf Location with up to Date Weather Conditons:
 
-![Navbar mobile]()
+![Nearest Location](img/screenshots/nearestlocation.png)
 
 #### Recent Photos:
 
-![About page](img/screenshots/photos.png)
+![Recent Photos](img/screenshots/photos.png)
 
 #### Our Story:
 
-![Prints Page](img/screenshots/story.png)
+![Video](img/screenshots/story.png)
 
 #### Our Team:
 
-![Print Details Page](img/screenshots/team.png)
+![Team](img/screenshots/team.png)
 
 #### Contact Us:
 
-![Blog Page](img/screenshots/contact.png)
+![Contact](img/screenshots/contact.png)
 
 ### Features Left to Implement
 
 - Link the contact form with email API
 - Allow users to Sign up and make accounts
 - Develop a commercial side for the website
+- Add up to date tide timing to every single location
 
 ## Testing
 
@@ -161,9 +163,9 @@ All fonts were obtained from fonts.googleapis (Ready to use template):
 
 ![JSHint overview](img/screenshots/jstest.png)
 
-- page has an excellent Accessibility rating in Lighthouse
+- Page has an excellent Accessibility rating in Lighthouse
 
-![Accessibility score](static/images-readme/readme-lighthouse.png)
+![Accessibility score](img/screenshots/lighthouse.png)
 
 - Tested the site opens in Chrome & Safari without issues.
 - All social links open to external pages as intended.
