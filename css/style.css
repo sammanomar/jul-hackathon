@@ -1427,6 +1427,9 @@ nav .active-section span {
 
 #findLocation-heading {
   font-weight: bold;
+  text-align: left;
+  position: relative;
+  left: 50px;
 }
 
 #btn {
