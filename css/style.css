@@ -1151,10 +1151,45 @@ nav .active-section span {
 
 /* Thank you page Style */
 
+.thank-page-content {
+  margin-top: 140px;
+  padding: 20px 0px;
+}
+
+.thank-logo { 
+  position: absolute;
+  top: 0px;
+  height: 142px;
+  width: 200px;
+  line-height: 109px;
+  background-color: #45489a;
+  padding: 10px;
+  text-align: center;
+}
+
+.thank-logo a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 24px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  height: 100px;
+  width: 100%;
+  display: inline-block;
+  border: 1px solid rgba(250, 250, 250, 0.5);
+}
+
+.thank-logo .logo em {
+  font-style: normal;
+  font-weight: 300;
+}
+
 #thanks {
   text-align: center;
   background-color: #f4f4f4;
-  padding: 100px 60px;
+  padding:7px;
+  height: 350px;
 }
 
 #thanks .section-heading {
@@ -1181,7 +1216,6 @@ nav .active-section span {
 #thanks .accent-button {
   margin: 30px;
 }
-
 
 
 /* Footer Style */
